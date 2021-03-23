@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --font: 'Kumbh Sans', sans-serif;
+      --primary-color: hsl(185, 75%, 39%);
+      --white: #ffffff;
+      --dark-grey: hsl(229, 23%, 23%);
+      --light-grey: hsl(227, 10%, 46%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+    }
+
+    .demo {
+      align-items: center;
+      background-color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+    }
+
+    .card {
+      background-image: url('images/bg-pattern-card.svg');
+      background-position: center top;
+      background-repeat: no-repeat;
+      border-radius: 15px;
+      text-align: center;
+      width: 320px;
+    }
+
+    .card-main {
+      margin-top: 140px;
+      padding: 0 25px;
+    }
+
+    .card-main .avatar img {
+      border-radius: 50%;
+      height: 96px;
+      margin-top: calc(-96px/2);
+      padding: 5px;
+      width: 96px;
+    }
+
+    .card-main h2 {
+      font-size: 18px;
+      margin: 20px 0 10px 0px;
+    }
+
+
+    .card-main h2 span:last-child {
+      font-size: 16px;
+      font-weight: normal;
+      margin-left: 10px;
+    }
+
+    .card-main .location {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .card-bottom {
+      border-top: 1px solid #ededed;
+      display: block;
+    }
+
+    .card-bottom ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      list-style: none;
+      padding: 25px;
+    }
+
+    .card-bottom ul li {
+      display: grid;
+      justify-content: center;
+      grid-gap: 5px;
+      grid-template-rows: repeat(auto, 2);
+    }
+
+    .card-bottom ul li .counter {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .card-bottom ul li .label {
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    .card,
+    .card-main .avatar img {
+      background-color: var(--white);
+    }
+
+
+    .card-main h2,
+    .card-bottom ul li .counter {
+      color: var(--dark-grey);
+    }
+
+
+    .card-main h2 span:last-child,
+    .card-main .location,
+    .card-bottom ul li .label {
+      color: var(--light-grey);
+    }
+
+
+
+    .attribution {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 11px;
+      margin-top: 20px;
+    }
+
+    .attribution a {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding-bottom: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="demo">
+    <div class="card">
+      <div class="card-main">
+        <a href="#" class="avatar">
+          <img src="images/image-victor.jpg">
+        </a>
+        <h2><span>Victor Crest</span><span>26</span></h2>
+        <span class="location">London</span>
+      </div>
+      <div class="card-bottom">
+        <ul>
+          <li>
+            <span class="counter">80K</span>
+            <span class="label">Followers</span>
+          </li>
+          <li>
+            <span class="counter">803K</span>
+            <span class="label">Likes</span>
+          </li>
+          <li>
+            <span class="counter">1.4K</span>
+            <span class="label">Photos</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Vicente Calfo</a>.
+    </div>
+  </div>
+</body>
+
+</html>
